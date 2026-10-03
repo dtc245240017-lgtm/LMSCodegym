@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành Phối màu Đơn Tông - Monochromatic</title>
+    <style>
+        /* ==========================================
+           BƯỚC 1: Khai báo biến màu (CSS Variables)
+           ========================================== */
+        :root {
+            --color-level-1: #00ADEE; /* Màu chính / Badge On Sale */
+            --color-level-2: #00B2EF;
+            --color-level-4: #00BFF2; /* Bước 2: Màu nền Header/Nav */
+            --color-level-7: #8DD7F7; /* Bước 4: Màu nền phần Nội dung */
+            --color-level-9: #C6E9FA; /* Bước 5: Màu nền Footer */
+            --color-text: #000000;    /* Bước 6: Màu chữ đen cho toàn bộ trang */
+            --color-white: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: var(--color-text);
+            line-height: 1.6;
+        }
+
+        /* BƯỚC 2: Thay đổi màu nền Header/Navbar */
+        header {
+            background-color: var(--color-level-4);
+            color: var(--color-text);
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--color-text);
+        }
+
+        nav a {
+            color: var(--color-text);
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+
+        /* BƯỚC 4: Đổi màu nền phần nội dung */
+        .container {
+            background-color: var(--color-level-7);
+            padding: 40px 50px;
+            min-height: 400px;
+        }
+
+        .product-card {
+            background: var(--color-white);
+            border-radius: 8px;
+            padding: 20px;
+            max-width: 300px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        /* BƯỚC 3: Thay đổi màu nền phần ON SALE / PREVIEW */
+        .badge-sale {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: var(--color-level-1); /* Màu bậc 1 nổi bật */
+            color: var(--color-white);
+            padding: 5px 12px;
+            font-size: 12px;
+            font-weight: bold;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+
+        .product-title {
+            margin-top: 15px;
+            font-size: 18px;
+            color: var(--color-text);
+        }
+
+        .product-price {
+            font-size: 16px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .btn-preview {
+            background-color: var(--color-level-1);
+            color: var(--color-white);
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        /* BƯỚC 5: Đổi màu nền phần footer */
+        footer {
+            background-color: var(--color-level-9);
+            color: var(--color-text);
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header>
+        <div class="logo">DEMO STORE</div>
+        <nav>
+            <a href="#">Trang chủ</a>
+            <a href="#">Sản phẩm</a>
+            <a href="#">Liên hệ</a>
+        </nav>
+    </header>
+
+    <!-- Nội dung chính (Content) -->
+    <div class="container">
+        <h2>Sản phẩm nổi bật</h2>
+        <br>
+        <div class="product-card">
+            <span class="badge-sale">ON SALE</span>
+            <h3>Sản phẩm Mẫu</h3>
+            <p class="product-price">500.000 VNĐ</p>
+            <button class="btn-preview">PREVIEW</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Demo CodeGym - Phối màu đơn tông Monochromatic</p>
+    </footer>
+
+</body>
+</html>
